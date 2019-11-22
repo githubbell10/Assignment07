@@ -10,7 +10,9 @@ public class WordDisplay : MonoBehaviour
     public void SetWord (string word)
     {
         text.text = word;
+        text.color = KeepData.ColorOption;
     }
+
 
     public void RemoveLetter()
     {
