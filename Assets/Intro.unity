@@ -370,13 +370,13 @@ MonoBehaviour:
     m_Options:
     - m_Text: Pick your color
       m_Image: {fileID: 0}
-    - m_Text: blue
+    - m_Text: White
       m_Image: {fileID: 0}
-    - m_Text: white
+    - m_Text: Blue
       m_Image: {fileID: 0}
-    - m_Text: yellow
+    - m_Text: Yellow
       m_Image: {fileID: 0}
-    - m_Text: green
+    - m_Text: Green
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1142,7 +1142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960989542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -260480.38, y: -1726576, z: -733699.06}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1645,6 +1645,7 @@ GameObject:
   - component: {fileID: 1063421221}
   - component: {fileID: 1063421220}
   - component: {fileID: 1063421219}
+  - component: {fileID: 1063421222}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1670,7 +1671,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.05882353, g: 0.22745098, b: 0.05882353, a: 0}
+  m_BackGroundColor: {r: 0.05873977, g: 0.3773585, b: 0.2891432, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1717,6 +1718,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1063421222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063421218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addbd491a9d937e4cbda409e2cda5353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNameText: {fileID: 1389433355}
+  currentScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &1065737499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2042,7 @@ GameObject:
   - component: {fileID: 1389433354}
   - component: {fileID: 1389433356}
   - component: {fileID: 1389433355}
+  - component: {fileID: 1389433357}
   m_Layer: 5
   m_Name: showplayername
   m_TagString: Untagged
@@ -2094,6 +2111,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389433353}
   m_CullTransparentMesh: 0
+--- !u!114 &1389433357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389433353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addbd491a9d937e4cbda409e2cda5353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNameText: {fileID: 1389433355}
+  currentScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &1391261573
 GameObject:
   m_ObjectHideFlags: 0
