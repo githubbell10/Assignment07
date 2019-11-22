@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class WordDisplay : MonoBehaviour
 {
+    public static float wordSpeed = 1.0f;
     public Text text;
-    public float fallSpeed = 1.0f;
+    //public float fallSpeed = 1.0f;
+
+    public Slider WordSpeed;
+
     public void SetWord (string word)
     {
         text.text = word;
@@ -27,6 +31,10 @@ public class WordDisplay : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(0f, -fallSpeed * Time.deltaTime, 0f);
+        transform.Translate(0f, -wordSpeed * Time.deltaTime, 0f);
+    }
+    public void SetWordSpeed()
+    {
+        wordSpeed = WordSpeed.value;    // value of the slider
     }
 }

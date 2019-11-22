@@ -6,21 +6,12 @@ using UnityEngine.UI;
 public class KeepData : MonoBehaviour
 {
     public static string PlayerName = "default name";
-    public static bool OversizedBall = true;
-    public static int RoundsToPlay =3;
-    public static float PlayerSpeedMultiplier = 1.0f;
     public static int Currentscore = 0;
     public static int HighScore = 0;
-    public static int TargetRotationSpeedMultiplier;
     public static Color ColorOption = Color.white;
-
     public InputField playerName;
-    public Toggle ballSize;
-    public Dropdown colorOfWord;
-    public Slider playerSpeedMultiplier;
-    public Slider targetRotationSlider;
-    
-
+    public Dropdown ColorOfWord;
+   
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -30,16 +21,11 @@ public class KeepData : MonoBehaviour
     {
         PlayerName = playerName.text;
     }
-    public void BigBall (bool newValue)
-    {
-        OversizedBall = newValue;
-    }
-
-    
-    
+  
+       
     public void setColorOfWord()
     {
-        switch (colorOfWord.value)
+        switch (ColorOfWord.value)
         {
             case 1:
                 ColorOption = Color.white;
@@ -56,8 +42,7 @@ public class KeepData : MonoBehaviour
                 break;
         }
     }
-    public void SetPlayerSpeedMultiplier()
-    {
-        PlayerSpeedMultiplier = playerSpeedMultiplier.value;    // value of the slider
-    }
+  
+
+
 }
