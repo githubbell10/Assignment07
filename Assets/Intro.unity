@@ -232,10 +232,10 @@ RectTransform:
   m_Father: {fileID: 2054388570}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.28300002, y: 0.065000005}
-  m_AnchorMax: {x: 0.48248813, y: 0.13833809}
-  m_AnchoredPosition: {x: 0.30999756, y: 0.8350067}
-  m_SizeDelta: {x: -1.6100006, y: 0.73}
+  m_AnchorMin: {x: 0.254, y: 0.009000001}
+  m_AnchorMax: {x: 0.45100003, y: 0.086}
+  m_AnchoredPosition: {x: 0.099998474, y: 0.7749939}
+  m_SizeDelta: {x: -0.6100006, y: -1.2700005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336306612
 MonoBehaviour:
@@ -415,7 +415,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 830846606}
   - component: {fileID: 830846605}
   - component: {fileID: 830846607}
+  - component: {fileID: 830846608}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -904,6 +905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: {fileID: 1729883155}
   ColorOfWord: {fileID: 339934177}
+  ShowName: {fileID: 1389433355}
 --- !u!4 &830846606
 Transform:
   m_ObjectHideFlags: 0
@@ -932,6 +934,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 7186049162992979395, guid: e2ae915604fa4e446b63ea83949ce7c5, type: 3}
   WordSpeed: {fileID: 2098179482}
+--- !u!114 &830846608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830846604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addbd491a9d937e4cbda409e2cda5353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNameText: {fileID: 1389433355}
+  currentScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &850125956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1662,6 @@ GameObject:
   - component: {fileID: 1063421221}
   - component: {fileID: 1063421220}
   - component: {fileID: 1063421219}
-  - component: {fileID: 1063421222}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1718,21 +1734,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1063421222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063421218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: addbd491a9d937e4cbda409e2cda5353, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerNameText: {fileID: 1389433355}
-  currentScoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
 --- !u!1 &1065737499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,12 +2121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389433353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: addbd491a9d937e4cbda409e2cda5353, type: 3}
+  m_Script: {fileID: 11500000, guid: c3e2ec28ceeaf1545847d0e215485812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNameText: {fileID: 1389433355}
-  currentScoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
+  playerName: {fileID: 1729883155}
+  ColorOfWord: {fileID: 0}
+  ShowName: {fileID: 0}
 --- !u!1 &1391261573
 GameObject:
   m_ObjectHideFlags: 0

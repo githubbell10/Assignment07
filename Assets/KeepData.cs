@@ -11,6 +11,7 @@ public class KeepData : MonoBehaviour
     public static Color ColorOption = Color.white;
     public InputField playerName;
     public Dropdown ColorOfWord;
+    public Text ShowName;
    
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class KeepData : MonoBehaviour
 
     public void UpdateName()    //updates on input change for input field
     {
-        PlayerName = playerName.text;
+        ShowName.text = playerName.text;
     }
   
        
