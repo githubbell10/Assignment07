@@ -37,6 +37,7 @@ public class Word
         if (wordTyped)
         {
             display.RemoveWord();
+            
         }
         return wordTyped;
     }

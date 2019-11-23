@@ -40,7 +40,7 @@ public class WordDisplay : MonoBehaviour
         public void RemoveWord()
         {
             Destroy(gameObject);
-            KeepData.Currentscore += 1;
+           
         }
 
         private void Update()
