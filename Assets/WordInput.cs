@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WordInput : MonoBehaviour
 {
+    public AudioSource keystroke;
     public WordManager wordManager;
 
     // Update is called once per frame
@@ -12,6 +13,7 @@ public class WordInput : MonoBehaviour
       foreach (char letter in Input.inputString)
       {
             wordManager.TypeLetter(letter);
+            keystroke.Play();
       }
     }
 }
