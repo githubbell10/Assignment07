@@ -20,10 +20,11 @@ public class KeepData : MonoBehaviour
 
     public void UpdateName()    //updates on input change for input field
     {
+        PlayerName = playerName.text;
         ShowName.text = playerName.text;
     }
-  
-       
+
+
     public void setColorOfWord()
     {
         switch (ColorOfWord.value)
