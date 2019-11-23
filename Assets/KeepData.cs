@@ -8,6 +8,7 @@ public class KeepData : MonoBehaviour
     public static string PlayerName = "Default Name";
     public static int Currentscore = 0;
     public static int HighScore = 0;
+    public static int Missed = 0;
     public static Color ColorOption = Color.white;
     public InputField playerName;
     public Dropdown ColorOfWord;

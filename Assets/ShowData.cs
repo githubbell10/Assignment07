@@ -8,6 +8,7 @@ public class ShowData : MonoBehaviour
     public Text PlayerNameText;
     public Text currentScoreText;
     public Text highScoreText;
+    public Text missedText;
 
     private void Awake()
     {
@@ -19,6 +20,8 @@ public class ShowData : MonoBehaviour
             highScoreText.text = "High score: " +
                 KeepData.HighScore;
             KeepData.Currentscore = 0;
+            missedText.text = "Missed: " +
+                KeepData.Missed;
         }
     }
 

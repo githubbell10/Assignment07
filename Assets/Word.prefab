@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4857670789240841628}
   - component: {fileID: 7186049162992979395}
   - component: {fileID: 9123058525501773358}
+  - component: {fileID: 247215960072580149}
   m_Layer: 5
   m_Name: Word
-  m_TagString: Untagged
+  m_TagString: word
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,3 +94,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7186049162992979395}
+  WordSpeed: {fileID: 0}
+--- !u!65 &247215960072580149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7244482994942781438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
