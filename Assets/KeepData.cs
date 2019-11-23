@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeepData : MonoBehaviour
 {
-    public static string PlayerName = "default name";
+    public static string PlayerName = "Default Name";
     public static int Currentscore = 0;
     public static int HighScore = 0;
     public static Color ColorOption = Color.white;
