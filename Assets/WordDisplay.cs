@@ -25,7 +25,7 @@ public class WordDisplay : MonoBehaviour
 
     public void RemoveLetter()
     {
-        sound.PlayOneShot(keystroke);
+        sound.Play();
         text.text = text.text.Remove(0, 1);
         text.color = Color.red;
     }
