@@ -14,6 +14,8 @@ public class scenes : MonoBehaviour
 
     public void StartPlay()
     {
+        WordDisplay.Score = 0;
+        WordDisplay.MissedScore = 0;
         SceneManager.LoadScene("Main");
     }
     public void StopPlaying()

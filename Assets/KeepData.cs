@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class KeepData : MonoBehaviour
 {
     public static string PlayerName = "Default Name";
-    public static int Currentscore = 0;
-    public static int HighScore = 0;
-    public static int Missed = 0;
+    public static float WordSpeedMultiplier = 1.0f;
     public static Color ColorOption = Color.white;
     public InputField playerName;
     public Dropdown ColorOfWord;
-    public Text ShowName;
-   
+    public Slider WordSpeed;
+    
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -22,9 +21,12 @@ public class KeepData : MonoBehaviour
     public void UpdateName()    //updates on input change for input field
     {
         PlayerName = playerName.text;
-        ShowName.text = playerName.text;
     }
 
+    public void SetWordSpeedMultiplier()
+    {
+        WordSpeedMultiplier = WordSpeed.value;
+    }
 
     public void setColorOfWord()
     {

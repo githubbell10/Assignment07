@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class WordManager : MonoBehaviour
 {
     public List <Word> words;
-    public Text ScoreText;
-   
-
     public WordSpawner wordSpawner;
     
     private bool hasActiveWord;
     private Word activeWord;
-    public int score = 0;
 
     public void AddWord ()
     {
@@ -49,11 +46,7 @@ public class WordManager : MonoBehaviour
         if (hasActiveWord && activeWord.WordTyped())
         {
             hasActiveWord = false;
-            words.Remove(activeWord);
-            score++;
-            ScoreText.text = "Current Score: " + score;
-            
-
+            words.Remove(activeWord);           
         }
 
     }

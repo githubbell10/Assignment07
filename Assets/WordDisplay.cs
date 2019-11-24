@@ -4,12 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WordDisplay : MonoBehaviour
-{
-    public static float wordSpeed = 1.0f;
-    public static int Currentscore = 0;
-    public static int HighScore = 0;
+{   private AudioSource sound;
+    public AudioClip keystroke;
+
+    public float wordSpeed = 1.0f;
     public Text text;
-    public Slider WordSpeed;
+
+    public static int Score = 0;
+    public static int MissedScore;
+    public static int highScore = 0;
+    
+ 
 
     public void SetWord(string word)
     {
@@ -20,36 +25,39 @@ public class WordDisplay : MonoBehaviour
 
     public void RemoveLetter()
     {
+        sound.PlayOneShot(keystroke);
         text.text = text.text.Remove(0, 1);
         text.color = Color.red;
     }
-    
-    /*
-    public void OnTriggerEnter(Collider other)
+
+    private void Awake()
     {
-        if (other.gameObject.tag == "word")       // If the object that was entered has the tag "Pickup"
-        {
+        sound = GetComponent<AudioSource>();
+    }
 
-            other.gameObject.SetActive(false);      // Then set that object to be inactive (hide it)
-            KeepData.Missed += 1;
-            KeepData.Missed = "Score: " + KeepData.Missed;     // Updates the text property of scoreText
-           
+    public void RemoveWord()
+     {
+        Score++;
+        if (Score > highScore)
+        {
+            highScore = Score;
         }
-    }/*/
+        Destroy(gameObject);
+     }
 
-        public void RemoveWord()
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "wall")
         {
-            Destroy(gameObject);
-           
+            MissedScore++;
         }
-
-        private void Update()
+    }
+    
+        
+    private void Update()
         {
-            transform.Translate(0f, -wordSpeed * Time.deltaTime, 0f);
+            transform.Translate(0f, -wordSpeed * Time.deltaTime * KeepData.WordSpeedMultiplier, 0f);
         }
-        public void SetWordSpeed()
-        {
-            wordSpeed = WordSpeed.value;    // value of the slider
-        }
+       
 
     }

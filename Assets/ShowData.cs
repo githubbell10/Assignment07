@@ -6,22 +6,15 @@ using UnityEngine.UI;
 public class ShowData : MonoBehaviour
 {
     public Text PlayerNameText;
-    public Text currentScoreText;
-    public Text highScoreText;
-    public Text missedText;
+    public Text wordSpeedText;
+    
 
-    private void Awake()
+    private void Update()
     {
         {
-            PlayerNameText.text = "Name: " +
-                KeepData.PlayerName;
-            currentScoreText.text = "Last score: " +
-                KeepData.Currentscore;
-            highScoreText.text = "High score: " +
-                KeepData.HighScore;
-            KeepData.Currentscore = 0;
-            missedText.text = "Missed: " +
-                KeepData.Missed;
+           PlayerNameText.text = "Name: " +  KeepData.PlayerName;
+           wordSpeedText.text = "Speed " + KeepData.WordSpeedMultiplier.ToString();
+
         }
     }
 
